@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tarefa } from '../../models/tarefa.model';
+import { Tarefa } from '../../models/tarefa';
 import { TarefaService } from '../../services/tarefa';
 
 @Component({

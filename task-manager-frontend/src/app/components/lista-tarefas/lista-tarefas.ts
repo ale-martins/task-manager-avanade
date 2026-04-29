@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Tarefa } from '../../models/tarefa.model';
+import { Tarefa } from '../../models/tarefa';
 import { TarefaService } from '../../services/tarefa';
 import { FormularioTarefaComponent } from '../formulario-tarefa/formulario-tarefa';
 

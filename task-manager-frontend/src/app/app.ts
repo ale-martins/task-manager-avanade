@@ -1,11 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ListaTarefasComponent } from './components/lista-tarefas/lista-tarefas';
 
 @Component({
-  selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+    selector: 'app-root',
+    standalone: true,
+    imports: [ListaTarefasComponent],
+    templateUrl: './app.html',
+    styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('task-manager-frontend');
-}
+export class App {}
