@@ -130,6 +130,9 @@ O enunciado do desafio indica SQL Server como banco de dados. Neste projeto, opt
 - Editar tarefa existente
 - Excluir tarefa
 - Campos: Título, Descrição, Status (Pendente / Concluída), Data de Criação
+- Filtro de tarefas por status
+- Validação de campo obrigatório (título)
+- Mensagens de sucesso e erro nas operações
 
 ---
 
