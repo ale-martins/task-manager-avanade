@@ -1,17 +1,33 @@
 <div class="container">
     <h1>Gerenciador de Tarefas</h1>
 
-    <button class="btn-novo" (click)="novaTarefa()">+ Nova Tarefa</button>
+    <div class="toolbar">
+        <button class="btn-novo" (click)="novaTarefa()">+ Nova Tarefa</button>
+        <div class="filtro">
+            <label>Filtrar por status:</label>
+            <select [(ngModel)]="filtroStatus" (change)="aplicarFiltro()">
+                <option value="Todos">Todos</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Concluída">Concluída</option>
+            </select>
+        </div>
+    </div>
+
+    @if (mensagemSucesso) {
+    <div class="mensagem-sucesso" [style.display]="mensagemSucesso ? 'block' : 'none'">
+        {{ mensagemSucesso }}
+    </div>
+    }
 
     @if (mostrarFormulario) {
-        <app-formulario-tarefa 
-            [tarefa]="tarefaSelecionada" 
+        <app-formulario-tarefa
+            [tarefa]="tarefaSelecionada"
             (salvo)="aoSalvar()"
             (cancelado)="aoCancelar()">
         </app-formulario-tarefa>
     }
 
-    @if (tarefas.length > 0) {
+    @if (tarefasFiltradas.length > 0) {
         <table>
             <thead>
                 <tr>
@@ -23,7 +39,7 @@
                 </tr>
             </thead>
             <tbody>
-                @for (tarefa of tarefas; track tarefa.id) {
+                @for (tarefa of tarefasFiltradas; track tarefa.id) {
                     <tr>
                         <td>{{ tarefa.titulo }}</td>
                         <td>{{ tarefa.descricao }}</td>
@@ -42,6 +58,6 @@
             </tbody>
         </table>
     } @else {
-        <p>Nenhuma tarefa cadastrada.</p>
+        <p>Nenhuma tarefa encontrada.</p>
     }
 </div>
