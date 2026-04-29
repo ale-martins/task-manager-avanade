@@ -1,0 +1,2 @@
+# task-manager-avanade
+DESAFIO TÉCNICO – BOOTCAMP WEB FRONT (ANGULAR + ASP.NET)
