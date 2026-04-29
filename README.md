@@ -62,13 +62,6 @@ Este projeto utiliza o Supabase como banco de dados PostgreSQL em nuvem, no luga
 }
 ```
 
-5. No arquivo `TaskManager.API/appsettings.json`, substitua:
-```json
-"ConnectionStrings": {
-  "DefaultConnection": "Host=db.SEU-PROJETO.supabase.co;Port=5432;Database=postgres;Username=postgres;Password=SUA-SENHA"
-}
-```
-
 ### 3. Rode o backend
 
 ```bash
