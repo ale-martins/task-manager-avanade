@@ -1,0 +1,26 @@
+<div class="formulario">
+  <h2>{{ form.id ? 'Editar Tarefa' : 'Nova Tarefa' }}</h2>
+
+  <div class="campo">
+    <label>Título *</label>
+    <input type="text" [(ngModel)]="form.titulo" placeholder="Digite o título" />
+  </div>
+
+  <div class="campo">
+    <label>Descrição</label>
+    <textarea [(ngModel)]="form.descricao" placeholder="Digite a descrição"></textarea>
+  </div>
+
+  <div class="campo">
+    <label>Status</label>
+    <select [(ngModel)]="form.status">
+      <option value="Pendente">Pendente</option>
+      <option value="Concluída">Concluída</option>
+    </select>
+  </div>
+
+  <div class="acoes">
+    <button class="btn-salvar" (click)="salvar()">Salvar</button>
+    <button class="btn-cancelar" (click)="cancelar()">Cancelar</button>
+  </div>
+</div>
